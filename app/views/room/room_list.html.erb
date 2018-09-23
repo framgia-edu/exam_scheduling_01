@@ -1,0 +1,53 @@
+<% provide :title, "Phong" %>
+<% provide :id, "body_room" %>
+<%= render "layouts/menu" %>
+<section>
+  <form action="delete_room" method="get">
+    <h1>Danh sach cac phong
+      <section class="links">
+        </br>
+        <a class="link wipe" href="add_room">Thêm</a>
+      </section>
+    </h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tên Phòng</th>
+            <th>Sức Chứa</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td><?php echo $i+1; ?></td>
+            <td><?php echo $room[$i]['ten_phong']; ?></td>
+            <td><?php echo $room[$i]['suc_chua']; ?></td>
+            <td>
+              <section class="links">
+                <a class="link underline" href="edit_room?id=<?php echo $room[$i]['id']; ?> " style="margin-left: -10px">Sửa</a>
+              </section>
+            </td>
+            <td>
+              <div>
+                <label>
+                  <input type="checkbox" class="option-input checkbox" name="<?php echo $room[$i]['id']?>"/>
+                                                                    Xóa
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="wrap">
+      <button class="button">Xóa</button>
+    </div>
+  </form>
+</section>

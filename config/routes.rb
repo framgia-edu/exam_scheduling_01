@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "login#login_form"
+  get "admin/index"
+  get "subject/subject_list"
+  get "class/class_list"
+  get "student/student_list"
+  get "room/room_list"
+  get "date/date_list"
+  get "subject/new_subject", to: "subject#new"
 end

@@ -1,0 +1,53 @@
+<% provide :title, "Sinh Vien" %>
+<% provide :id, "body_student" %>
+<%= render "layouts/menu" %>
+<section>
+  <form action="delete_student" method="get">
+    <h1>Danh sach sinh vien
+      <section class="links">
+        </br>
+        <a class="link wipe" href="add_student">Thêm</a>
+      </section>
+    </h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Mã sinh viên</th>
+            <th>Họ tên</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td><?php echo $i+1; ?></td>
+            <td><?php echo $student[$i]['ma_sinh_vien']; ?></td>
+            <td><?php echo $student[$i]['ho_ten']; ?></td>
+            <td>
+              <section class="links">
+                <a class="link underline" href="edit_student?id=<?php echo $student[$i]['id']; ?> " style="margin-left: -10px">Sửa</a>
+              </section>
+            </td>
+            <td>
+              <div>
+                <label>
+                  <input type="checkbox" class="option-input checkbox" name="<?php echo $student[$i]['id']?>"/>
+                                                                    Xóa
+                </label>
+              </div>
+            </td>
+          </tr>                                
+        </tbody>
+      </table>
+    </div>
+    <div class="wrap">
+      <button class="button">Xóa</button>
+    </div>
+  </form>
+</section>

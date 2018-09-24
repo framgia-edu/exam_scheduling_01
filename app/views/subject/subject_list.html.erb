@@ -1,0 +1,59 @@
+<% provide :id, "body_subject" %>
+<% provide :title, "Hoc Phan" %>
+<%= render "layouts/menu" %>
+<section>
+  <form action="delete_subject" method="get">
+    <h1>Danh sach hoc phan
+      <section class="links">
+        </br>
+
+        <%= link_to "Thêm", subject_new_subject_path, class: "link wipe" %>
+      </section>
+    </h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Mã học phần </th>
+            <th>Tên học phần</th>
+            <th>Danh sách lớp</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>
+              <%= link_to "X e m", "#", id:  "xem_danh_sach_lop" %>
+            </td>
+            <td>
+              <section class="links">
+                <%= link_to "Sửa", "#", class: "link underline", style: "margin-left: -10px" %>
+              </section>
+            </td>
+            <td>
+              <div>
+                <label>
+                  <input type="checkbox" class="option-input checkbox" name="<?php echo $subject[$i]['id']?>"/>
+                                                                      Xóa
+                </label>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="wrap">
+      <button class="button">Xóa</button>
+    </div>
+  </form>
+</section>

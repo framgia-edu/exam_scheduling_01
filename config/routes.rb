@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   post "/login", to: "login#create"
   
   resource :subject, only: [:show]
+  namespace :admin do
+  	resource :subject, except: [:new, :create, :destroy]
+  end 
+  
+  get "/getedit/:id", to: "students#edit"
+  resources :students
+  root "students#new"
 end
 

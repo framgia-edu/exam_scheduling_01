@@ -1,0 +1,9 @@
+<h1><%= t ".students" %></h1>
+
+<% @students.each do |st| %>
+  <div>
+    <%= st.code %>
+    | <%= st.name %>
+    | <%= st.info %>
+  </div>
+<% end %>

@@ -1,6 +1,8 @@
 en:
   hello: "Hello world"
   base_title: "Exam Scheduling"
+  nostudent: "Not exist"
+  please_log: "Log in first"
 
   admin:
     index:
@@ -17,6 +19,7 @@ en:
       day: "Ngày"
       logout: "Logout"
     header:
+    application:
       schedule: "Exam Scheduling"
       users: "User"
       account: "Account"
@@ -27,6 +30,9 @@ en:
       home: "Home"
 
   students:
+    edit:
+      form: "Form edit"
+      save: "Save"
     create:
       success: "Create success"
       failed: "Failed to save, check information again please before create"
@@ -35,6 +41,8 @@ en:
     new:
       create: "Create"
       new: "Create new student"
+    index:
+      students: "All students"
 
   sessions:
     new:

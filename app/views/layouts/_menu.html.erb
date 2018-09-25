@@ -1,0 +1,16 @@
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+  <label class="menu-open-button" for="menu-open">
+    <span class="lines line-1"></span>
+    <span class="lines line-2"></span>
+    <span class="lines line-3"></span>
+  </label>
+
+  <%= link_to t(".subject"), subject_subject_list_path, class: "menu-item blue"%>
+  <%= link_to t(".class"), class_class_list_path, class: "menu-item green"%>
+  <%= link_to t(".student"), student_student_list_path, class: "menu-item red"%>
+  <%= link_to t(".room"), room_room_list_path, class: "menu-item purple"%>
+  <%= link_to t(".day"), date_date_list_path, class: "menu-item orange"%>
+  <%= link_to t(".logout"), "#", class: "menu-item lightblue"%>
+</nav>
+

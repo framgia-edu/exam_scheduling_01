@@ -1,37 +1,14 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
-  layouts: 
+  base_title: "Exam Scheduling"
+
+  admin:
+    index:
+      title: "Bạn chưa đăng nhập"
+      infor: "Bạn Chưa Đăng Nhập"
+      click: "Click vào đây để đăng nhập"
+
+  layouts:
     menu:
       subject: "Học Phần"
       class: "Lớp"
@@ -39,7 +16,33 @@ en:
       room: "Phòng"
       day: "Ngày"
       logout: "Logout"
-  subject: 
+    header:
+      schedule: "Exam Scheduling"
+      users: "User"
+      account: "Account"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Log out"
+      login: "Log in"
+      home: "Home"
+
+  students:
+    create:
+      success: "Create success"
+      failed: "Failed to save, check information again please before create"
+    update:
+      update: "Update ready"
+    new:
+      create: "Create"
+      new: "Create new student"
+
+  sessions:
+    new:
+      login: "Log in"
+    create:
+      invalid: "Invalid email/password combination"
+
+  subjects:
     subject_list: 
       title: "Học Phần"
       name: "Danh sách học phần"
@@ -52,7 +55,27 @@ en:
       reckon_link: "X e m"
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
-  admin:
+    new:
+      signup: "New subject"
+      create: "Create new"
+    create:
+      success: "Create new successful"
+      error: "Error, want to create new again !"
+    update:
+      update: "Subject updated !"
+    edit:
+      please_log: "Please log in first !"
+      edit: "Edit subject"
+      save: "Save"
+      update: "Update info"
+    show:
+      nouser: "Subject not exist! Want to create new one?"
+      name: "Name"
+      code: "Code"
+      capacity: "Capacity"
+      exam_during: "Exam during"
+    destroy:
+      delete: "Subject's deleted !"
     index:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"
@@ -64,3 +87,30 @@ en:
       username: "Username"
       password: "Password"
       button: "Let me in."
+      sure: "Are you sure to delete this subject !"
+      subjects: "All subject here"
+
+  users:
+    new:
+      signup: "Sign up new Student/Supervisor"
+      create: "Create new user"
+    create:
+      success: "Create new user successful"
+    update:
+      update: "Account updated !"
+    edit:
+      please_log: "Please log in first !"
+      edit: "Edit account"
+      save: "Save"
+      update: "Update informations"
+    show:
+      nouser: "User not exist! Want to sign up?"
+      name: "Name"
+      code: "Code"
+      email: "Email"
+      info: "Info"
+    destroy:
+      delete: "User's deleted !"
+    index:
+      sure: "Are you sure to delete this user !"
+      users: "All users: admins, supervisors, students"

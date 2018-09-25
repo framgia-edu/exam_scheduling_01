@@ -15,4 +15,6 @@ class User < ApplicationRecord
   def remove_subject subject_exam
     subjects.delete subject_exam
   end
+  has_secure_password
+  scope :order_by_code, ->{order code: :asc}
 end

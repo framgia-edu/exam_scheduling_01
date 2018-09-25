@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_21_093616) do
+ActiveRecord::Schema.define(version: 2018_09_24_092031) do
 
   create_table "class_students", force: :cascade do |t|
     t.string "name"
     t.string "subject_code"
     t.string "student_code"
-    t.boolean "state"
+    t.string "student_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["student_code"], name: "index_class_students_on_student_code"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2018_09_21_093616) do
     t.integer "room_code"
     t.datetime "day"
     t.integer "session"
+    t.integer "number_oversee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_code"], name: "index_schedules_on_room_code"
@@ -78,8 +79,8 @@ ActiveRecord::Schema.define(version: 2018_09_21_093616) do
   create_table "subjects", force: :cascade do |t|
     t.string "code"
     t.string "name"
-    t.integer "students_limit"
-    t.integer "times_limit"
+    t.integer "capacity"
+    t.integer "exam_during"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,6 +92,13 @@ ActiveRecord::Schema.define(version: 2018_09_21_093616) do
     t.string "info"
     t.string "password_digest"
     t.boolean "admin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users_subjects", force: :cascade do |t|
+    t.integer "user_id" 
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

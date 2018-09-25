@@ -7,6 +7,7 @@ class CreateSchedules < ActiveRecord::Migration[5.2]
       t.integer :room_code
       t.datetime :day
       t.integer :session
+      t.integer :number_oversee
 
       t.timestamps
     end

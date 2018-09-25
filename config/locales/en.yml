@@ -31,3 +31,72 @@
 
 en:
   hello: "Hello world"
+  base_title: "Exam Scheduling"
+
+  layouts:
+    header:
+      schedule: "Exam Scheduling"
+      users: "User"
+      account: "Account"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Log out"
+      login: "Log in"
+      home: "Home"
+
+  sessions:
+    new:
+      login: "Log in"
+    create:
+      invalid: "Invalid email/password combination"
+
+  subjects:
+    new:
+      signup: "New subject"
+      create: "Create new"
+    create:
+      success: "Create new successful"
+      error: "Error, want to create new again !"
+    update:
+      update: "Subject updated !"
+    edit:
+      please_log: "Please log in first !"
+      edit: "Edit subject"
+      save: "Save"
+      update: "Update info"
+    show:
+      nouser: "Subject not exist! Want to create new one?"
+      name: "Name"
+      code: "Code"
+      capacity: "Capacity"
+      exam_during: "Exam during"
+    destroy:
+      delete: "Subject's deleted !"
+    index:
+      sure: "Are you sure to delete this subject !"
+      subjects: "All subject here"
+
+  users:
+    new:
+      signup: "Sign up new Student/Supervisor"
+      create: "Create new user"
+    create:
+      success: "Create new user successful"
+    update:
+      update: "Account updated !"
+    edit:
+      please_log: "Please log in first !"
+      edit: "Edit account"
+      save: "Save"
+      update: "Update informations"
+    show:
+      nouser: "User not exist! Want to sign up?"
+      name: "Name"
+      code: "Code"
+      email: "Email"
+      info: "Info"
+    destroy:
+      delete: "User's deleted !"
+    index:
+      sure: "Are you sure to delete this user !"
+      users: "All users: admins, supervisors, students"

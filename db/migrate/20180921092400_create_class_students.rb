@@ -4,8 +4,7 @@ class CreateClassStudents < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :subject_code
       t.string :student_code
-      t.boolean :state
-
+      t.string :student_name
       t.timestamps
     end
     add_index :class_students, :subject_code

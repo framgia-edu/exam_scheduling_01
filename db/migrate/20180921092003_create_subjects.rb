@@ -3,8 +3,8 @@ class CreateSubjects < ActiveRecord::Migration[5.2]
     create_table :subjects do |t|
       t.string :code
       t.string :name
-      t.integer :students_limit
-      t.integer :times_limit
+      t.integer :capacity
+      t.integer :exam_during
 
       t.timestamps
     end

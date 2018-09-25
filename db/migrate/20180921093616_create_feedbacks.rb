@@ -4,7 +4,6 @@ class CreateFeedbacks < ActiveRecord::Migration[5.2]
       t.string :message
       t.string :reply
       t.references :user, foreign_key: true
-
       t.timestamps
     end
     add_index :feedbacks, [:user_id, :created_at]

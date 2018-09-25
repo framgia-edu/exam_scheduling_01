@@ -43,6 +43,10 @@ en:
       new: "Create new student"
     index:
       students: "All students"
+      delete: "Delete"
+      sure: "Are you sure to delete this student?"
+    destroy:
+      delete: "Delete success"
 
   sessions:
     new:

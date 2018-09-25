@@ -1,0 +1,17 @@
+$light-black: #bbb;
+
+.userinfo {
+    font: bold italic 1.2em "Fira Sans", serif;
+}
+
+.mcontent {
+    padding: 10px;
+}
+
+body {
+    background-color: $light-black;
+}
+
+.logo {
+    max-width: 150px;
+}

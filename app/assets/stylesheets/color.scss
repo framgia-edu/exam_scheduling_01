@@ -1,8 +1,8 @@
 $h1-color: #fff;
-$background-color-of-tbl-header: rgba(255,255,255,0.3);
+$background-color-tbl-header: rgba(255,255,255,0.3);
 $border-color-of-tbl-content: rgba(255,255,255,0.3);
 $th-color: #fff;
-$td-color: $fff;
+$td-color: #fff;
 $border-bottom-color-of-td: rgba(255,255,255,0.1);
 $webkit-scrollbar-track-color: rgba(0,0,0,0.3);
 $webkit-scrollbar-thumb-color: rgba(0,0,0,0.3);
@@ -20,7 +20,7 @@ $wipe-hover-color: #124a58;
 $button-color: #000;
 $button-background-color: #fff;
 $button-box-shadow-color: rgba(0, 0, 0, 0.1);
-$button-hover-box-shadow-color: rgba(46, 229, 157, 0.4);0
+$button-hover-box-shadow-color: rgba(46, 229, 157, 0.4);
 $button-hover-background-color: #2EE59D;
 $button-hover-color: #fff;
 $xem-danh-sach-lop-color: blue;
@@ -60,7 +60,8 @@ $body-student-background-color-linear-b: #FD746C;
 /* body-room */
 
 $body-room-background-color-webkit-linear-left-a: #16222A;
-$body-room-background-color-webkit-linear-left-b: #3A6073
+$body-room-background-color-webkit-linear-left-b: #3A6073;
+$body-room-background-color-o-linear-left-b: #3A6073;
 $body-room-background-color-o-linear-left-a: #16222A;
 $body-room-background-color-linear-a: #16222A;
 $body-room-background-color-linear-b: #3A6073;

@@ -28,7 +28,7 @@ en:
       login: "Log in"
       home: "Home"
 
-  students:
+  users:
     edit:
       form: "Form edit"
       save: "Save"
@@ -39,11 +39,11 @@ en:
       update: "Update ready"
     new:
       create: "Create"
-      new: "Create new student"
+      new: "Create new user"
     index:
-      students: "All students"
+      users: "All users"
       delete: "Delete"
-      sure: "Are you sure to delete this student?"
+      sure: "Are you sure to delete this user?"
     destroy:
       delete: "Delete success"
     students_list: 
@@ -57,6 +57,11 @@ en:
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
       delete_button: "Xóa"
+      users: "All users"
+      delete: "Delete"
+      sure: "Are you sure to delete this user?"
+    destroy:
+      delete: "Delete success"
 
   sessions:
     new:
@@ -147,15 +152,18 @@ en:
       infor: "Bạn Chưa Đăng Nhập"
       click: "Click vào đây để đăng nhập"
   
-  login: 
+  sessions: 
     new:
+      form: "Form Log In"
       title: "Đăng nhập"
       name: "Đăng nhập"
-      username: "Username"
+      code: "Code"
       password: "Password"
       button: "Let me in."
       sure: "Are you sure to delete this subject !"
       subjects: "All subject here"
+    create:
+      invalid: "Invalid user code or password"
 
   users:
     new:

@@ -32,9 +32,13 @@ en:
       failed: "Failed to save, check information again please before create"
     update:
       update: "Update ready"
+      failed: "Cannot save the change!"
     new:
       create: "Create"
       new: "Create new student"
+    edit:
+      form: "Form Edit"
+      save: "Save"
 
   sessions:
     new:
@@ -82,11 +86,11 @@ en:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"
       click: "Click vào đây để đăng nhập"
-  login: 
+  logins: 
     new:
       title: "Đăng nhập"
       name: "Đăng nhập"
-      username: "Username"
+      code: "Usercode"
       password: "Password"
       button: "Let me in."
       sure: "Are you sure to delete this subject !"

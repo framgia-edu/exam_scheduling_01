@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include LoginsHelper
   before_action :set_locale
 
   private

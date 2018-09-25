@@ -28,8 +28,9 @@ class StudentsController < ApplicationController
   def update
     if @student.update student_params
       flash[:success] = t ".update"
-      redirect_to @student
+      redirect_to root_url
     else
+      flash[:danger] = t ".failed"
       render :edit
     end
   end

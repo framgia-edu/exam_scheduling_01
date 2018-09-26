@@ -1,0 +1,45 @@
+<% provide :path_search, rooms_path %>
+<% provide :text_search, t("rooms.code") %>
+<% provide :button_search, t("rooms.search") %>
+<% unless @room.valid? %>
+<% provide :button_room, t("rooms.create") %>
+<% else %>
+<% provide :button_room, t("rooms.save") %>
+<% end %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= render "form_room"%>
+  <%= render "shared/form_search"%>
+</nav>
+<table class="table table-bordered">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t("rooms.code") %></th>
+      <th scope="col"><%= t("rooms.name") %></th>
+      <th scope="col"><%= t("rooms.volume") %></th>
+      <th scope="col"><%= t("rooms.state") %></th>
+      <th scope="col"><%= t("table.edit") %></th>
+      <th scope="col"><%= t("table.delete") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rooms.each_with_index do |room,index| %>
+    <tr>
+      <th scope="row"><%=@rooms.offset+ index+1%></th>
+      <td><%=room.code%></td>
+      <td><%= link_to room.name, '#'%></td>
+      <td><%=room.volume%></td>
+      <td><%if room.state %>
+        <%= t("rooms.open") %>
+      <%else%>
+        <%= t("rooms.close") %>
+        <%end %></td>
+      <th scope="col"><%= link_to t("table.edit") , edit_room_path(room) %></th>
+      <th scope="col"><%= link_to t("table.delete"), room , method: :delete,
+        data: { confirm: t("table.confirm") }%></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @rooms ,
+ renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer%>

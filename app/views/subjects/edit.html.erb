@@ -1,0 +1,35 @@
+<% provide :button_text, t("subjects.save") %>
+<% provide :button_search, t("subjects.search_student") %>
+<% provide :text_search, t("subjects.student_code") %>
+<% provide :path_search, edit_subject_path %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<%= render "form" %>
+<%= render "form_class" %>
+<%= render "shared/form_search" %>
+</nav>
+<table class="table table-bordered">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t("subjects.subject_code") %></th>
+      <th scope="col"><%= t("subjects.student_code") %></th>
+      <th scope="col"><%= t("subjects.student_name") %></th>
+      <th scope="col"><%= t("subjects.table.delete") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each_with_index do |student,index| %>
+    <tr>
+      <td><%= @students.offset+ index+1 %></td>
+      <td><%= @subject.code %></td>
+      <td><%= student.code %></td>
+      <td><%= link_to student.name , '#' %></td>
+      <th scope="col"><%= link_to t("subjects.table.delete"), remove_subjects_path(
+        id: @subject.id, code: student.code),
+          data: { confirm: t("table.confirm") } %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @students ,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer%>

@@ -1,0 +1,11 @@
+<%= form_tag(yield(:path_search),method: :get) do%>
+  <div class="form-row">
+      <div class="col">
+      <%= text_field_tag :search, params[:search] ,class: "form-control",
+        placeholder: yield(:text_search) %>
+      </div>
+      <div class="col">
+      <%= submit_tag yield(:button_search),class: "btn btn-primary" %>
+      </div>
+  </div>
+<% end %>

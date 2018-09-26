@@ -1,0 +1,46 @@
+vi:
+  flash_delete: "xóa thành công"
+  flash_update: "cập nhật thành công"
+  flash_create: "tạo thành công"
+  flash_delete_fail: "xóa thất bại"
+  flash_update_fail: "cập nhật thất bại"
+  flash_create_fail: "tạo mới thất bại"
+  table:
+    confirm: "bạn có chắc muốn xóa không ?"
+    edit: "sửa"
+    delete: "xóa"
+  subjects:
+    subject_code: "mã học phần"
+    student_code: "mã sinh viên"
+    student_name: "tên sinh viên"
+    subject_name: "tên học phần"
+    times: "thời gian thi"
+    create: "tạo học phần"
+    save: "lưu chỉnh sửa"
+    search_subject: "tìm học phần"
+    search_student: "tìm sinh viên"
+    add: "thêm sinh viên"
+    student_total: "tổng số sinh viên"
+  schedules:
+    day: "ngày thi"
+    session: "kíp thi"
+    create: "tạo lịch thi"
+    start: "Ngày bắt đầu"
+    end: "Ngày kết thúc"
+  rooms:
+    search: "tìm phòng"
+    code: "mã phòng"
+    name: "tên phòng"
+    state: "tình trạng"
+    volume: "sức chứa"
+    open: "mở"
+    close: "đóng"
+    create: "tạo phòng"
+    number: "số giám thị"
+    save: "lưu chỉnh sửa"
+  layouts:
+  header:
+    schedules: "Lịch thi"
+    subjects: "Học phần"
+    rooms: "Phòng thi"
+

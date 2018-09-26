@@ -4,13 +4,13 @@ class CreateSchedules < ActiveRecord::Migration[5.2]
       t.string :class_name
       t.string :subject_code
       t.string :subject_name
-      t.integer :room_code
+      t.integer :times_exam
+      t.string :room_code
       t.datetime :day
       t.integer :session
 
       t.timestamps
     end
-    add_index :schedules, :room_code
-    add_index :schedules, :subject_code
+    add_index :schedules, [:subject_code,:room_code]
   end
 end

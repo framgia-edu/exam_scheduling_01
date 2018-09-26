@@ -1,0 +1,11 @@
+<%= form_for :search ,url: '#' , method: :get do |form| %>
+  <div class="form-row">
+      <div class="col">
+      <%= form.text_field :code, class: "form-control",
+        placeholder: yield(:text_search) %>
+      </div>
+      <div class="col">
+      <%= form.submit yield(:button_search),class: "btn btn-primary" %>
+      </div>
+  </div>
+<% end %>

@@ -57,3 +57,10 @@ en:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"
       click: "Click vào đây để đăng nhập"
+  login: 
+    new:
+      title: "Đăng nhập"
+      name: "Đăng nhập"
+      username: "Username"
+      password: "Password"
+      button: "Let me in."

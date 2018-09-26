@@ -52,3 +52,8 @@ en:
       reckon_link: "X e m"
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
+  admin:
+    index:
+      title: "Bạn chưa đăng nhập"
+      infor: "Bạn Chưa Đăng Nhập"
+      click: "Click vào đây để đăng nhập"

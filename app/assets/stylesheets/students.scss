@@ -48,11 +48,11 @@ td{
 /* demo styles */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-
-#body_class{
-  background: -webkit-linear-gradient(left, $body-class-background-color-webkit-linear-left-a, $body-class-background-color-webkit-linear-left-b);
-  background: -o-linear-gradient(left, $body-class-background-color-o-linear-left-a, $body-class-background-color-o-linear-left-b);
-  background: linear-gradient(to right, $body-class-background-color-linear-a, body-class-background-color-linear-b);
+                
+#body_student{
+  background: -webkit-linear-gradient(left, $body-student-background-color-webkit-linear-left-a, $body-student-background-color-webkit-linear-left-b);
+  background: -o-linear-gradient(left, $body-student-background-color-o-linear-left-a, $body-student-background-color-o-linear-left-b);
+  background: linear-gradient(to right, $body-student-background-color-linear-a, $body-student-background-color-linear-b;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -267,34 +267,4 @@ section{
   box-shadow: 0px 15px 20px $button-hover-box-shadow-color;
   color: $button-hover-color;
   transform: translateY(-7px);
-}
-
-#xem_danh_sach_sinh {
-  color: $xem-danh-sach-sinh-vien-color;
-  font: bold 1.2em/1.5 'Fjalla One', sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: .2s;
-}
-
-#xem_danh_sach_sinh_vien:hover {
-  color: $xem-danh-sinh-sach-vien-hover-color;
-}
-
-@media (-webkit-min-device-pixel-ratio:0) {
-  #xem_danh_sach_sinh_vien {
-    background-color: $xem-danh-sach-sinh-vien-background-color;
-    background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-transition: .1s .2s;
-    -webkit-background-clip: text;
-   }
-
-  #xem_danh_sach_sinh_vien:hover {
-    background-position: 0 0;
-    color: transparent;
-    transition: .4s 0;
-  }
 }

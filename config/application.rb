@@ -29,5 +29,6 @@ module ExamScheduling01
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.paths["config/routes"] += Dir[Rails.root.join("config/routes/*.rb")]
   end
 end

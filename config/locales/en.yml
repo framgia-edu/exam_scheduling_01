@@ -31,3 +31,25 @@
 
 en:
   hello: "Hello world"
+  layouts: 
+    menu:
+      subject: "Học Phần"
+      class: "Lớp"
+      student: "Sinh Viên"
+      room: "Phòng"
+      day: "Ngày"
+      logout: "Logout"
+  subject: 
+    subject_list: 
+      title: "Học Phần"
+      name: "Danh sách học phần"
+      add: "Thêm"
+      subject_code: "Mã học phần"
+      subject_name: "Tên học phần"
+      class_list_of_subject: "Danh sách lớp"
+      edit: "Sửa"
+      delete: "Xóa"
+      reckon_link: "X e m"
+      edit_link: "Sửa"
+      delete_checkbox: "Xóa"
+      delete_button: "Xóa"

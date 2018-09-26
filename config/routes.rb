@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /en|vi/ do
+  root "subjects#index"
+  post "subjects/add" , to: "subjects#add"
+  get "subjects/remove", to: "subjects#remove"
+  resources :subjects
+  resources :rooms
+  resources :schedules
+  end
 end

@@ -5,7 +5,7 @@ ruby "2.5.1"
 
 gem "bcrypt"
 gem "bootsnap", ">= 1.1.0", require: false
-gem "bootstrap-sass", "3.3.7"
+gem "bootstrap", "~> 4.1.3"
 gem "bootstrap-will_paginate", "1.0.0"
 gem "carrierwave"
 gem "coffee-rails", "~> 4.2"
@@ -26,6 +26,7 @@ gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate", "3.1.6"
+gem "will_paginate-bootstrap"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

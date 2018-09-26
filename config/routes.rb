@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /en|vi/ do
+  root "schedules#index"
+  get "static_pages/contact"
+  get "static_pages/notice"
+  resources :subjects do
+    collection do
+      post "add"
+      post "remove"
+    end
+  end
+  resources :rooms
+  resources :schedules
+  resources :users
+  end
 end

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   namespace :admin do
   	resource :subject, except: [:new, :create, :destroy]
   end 
+  resources :students
+  root "students#new"
 end

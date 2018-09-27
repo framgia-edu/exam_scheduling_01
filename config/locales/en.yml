@@ -97,7 +97,7 @@ en:
       name: "Danh sách các phòng"
       add: "Thêm"
       room_name: "Tên phòng"    
-      disk: "Thêm"
+      disk: "Sức chứa"
       edit: "Sửa"
       delete: "Xóa"
       reckon_link: "X e m"
@@ -105,6 +105,22 @@ en:
       delete_checkbox: "Xóa"
       delete_button: "Xóa"
       
+  class:
+    class_list: 
+      title: "Lớp"
+      name: "Danh sách lớp"
+      add: "Thêm"
+      subject_code_of_class: "Mã học phần"
+      subject_name_of_class: "Tên học phần"
+      class_code: "Mã Lớp"
+      student_list_of_class: "Danh sách sinh viên"
+      edit: "Sửa"
+      delete: "Xóa"
+      reckon_link: "X e m"
+      edit_link: "Sửa"
+      delete_checkbox: "Xóa"
+      delete_button: "Xóa"
+
   admin:
     index:
       title: "Bạn chưa đăng nhập"

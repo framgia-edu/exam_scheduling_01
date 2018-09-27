@@ -1,0 +1,15 @@
+<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+  <label class="menu-open-button" for="menu-open">
+    <span class="lines line-1"></span>
+    <span class="lines line-2"></span>
+    <span class="lines line-3"></span>
+  </label>
+
+  <%= link_to t(".subject"), "#", class: "menu-item blue"%>
+  <%= link_to t(".class"), "#", class: "menu-item green"%>
+  <%= link_to t(".student"), "#", class: "menu-item red"%>
+  <%= link_to t(".room"), "#", class: "menu-item purple"%>
+  <%= link_to t(".day"), "#", class: "menu-item orange"%>
+  <%= link_to t(".logout"), "#", class: "menu-item blue"%>
+</nav>

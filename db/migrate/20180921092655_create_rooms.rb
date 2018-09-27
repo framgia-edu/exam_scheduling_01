@@ -4,8 +4,8 @@ class CreateRooms < ActiveRecord::Migration[5.2]
       t.string :code
       t.string :name
       t.integer :volume
-      t.integer :number_overseer
       t.boolean :state
+      t.integer :overseer_number
 
       t.timestamps
     end

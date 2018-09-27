@@ -8,8 +8,8 @@ class SchedulesController < ApplicationController
   def edit; end
 
   def create
-    @times_start = params[:times_exam][:times_start]
-    @times_end = params[:times_exam][:times_end]
+    @times_start = params[:times_start]
+    @times_end = params[:times_end]
     redirect_to schedules_url
   end
 

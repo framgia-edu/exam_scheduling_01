@@ -1,0 +1,41 @@
+<% provide :title, t("header.subjects") %>
+<% provide :button_text, t("subjects.create") %>
+<% provide :button_search, t("subjects.search_subject") %>
+<% provide :text_search, t("subjects.subject_code") %>
+<% provide :path_search, subjects_path %>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<%= render "form"%>
+<%= render "shared/form_search"%>
+</nav>
+<table class="table table-bordered table-striped">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t("subjects.subject_code") %></th>
+      <th scope="col"><%= t("subjects.subject_name") %></th>
+      <th scope="col"><%= t("subjects.student_total") %></th>
+      <th scope="col"><%= t("subjects.times") %></th>
+      <th scope="col"><%= t("table.edit") %></th>
+      <th scope="col"><%= t("table.delete") %></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @subjects.each.with_index(1) do |subject, index| %>
+    <tr>
+      <th scope="row"><%= @subjects.offset + index %></th>
+      <td><%= subject.code %></td>
+      <td><%= link_to subject.name, '#' %></td>
+      <td><%= subject.class_students.count %></td>
+      <td><%= subject.times_exam %> minute</td>
+      <th scope="col"><%= link_to t("table.edit"),
+       edit_subject_path(subject) %></th>
+      <th scope="col"><%= link_to t("table.delete"), subject, method: :delete,
+        data: { confirm: t("table.confirm") }%></th>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+<%= will_paginate @subjects ,
+ renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer%>

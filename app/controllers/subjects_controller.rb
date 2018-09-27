@@ -37,8 +37,8 @@ class SubjectsController < ApplicationController
   end
 
   def add
-    @subject = Subject.find_by id: params[:student][:sub_id]
-    @student = User.find_by code: params[:student][:code]
+    @subject = Subject.find_by id: params[:sub_id]
+    @student = User.find_by code: params[:code]
 
     if @student.blank? || @subject.was_exist?(@student)
       flash[:danger] = t "flash_update_fail"

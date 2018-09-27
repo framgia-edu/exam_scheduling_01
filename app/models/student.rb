@@ -8,5 +8,5 @@ class Student < ApplicationRecord
   validates :code, presence: true
   has_secure_password
 
-  scope :order_by_code, ->{order code :asc}
+  scope :order_by_code, ->{order code: :asc}
 end

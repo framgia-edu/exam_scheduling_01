@@ -55,6 +55,7 @@ en:
       reckon_link: "X e m"
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
+      delete_button: "Xóa"
     new:
       signup: "New subject"
       create: "Create new"
@@ -77,6 +78,21 @@ en:
     destroy:
       delete: "Subject's deleted !"
       delete_button: "Xóa"
+
+  rooms:
+    rooms_list: 
+      title: "Phòng"
+      name: "Danh sách các phòng"
+      add: "Thêm"
+      room_name: "Tên phòng"    
+      disk: "Thêm"
+      edit: "Sửa"
+      delete: "Xóa"
+      reckon_link: "X e m"
+      edit_link: "Sửa"
+      delete_checkbox: "Xóa"
+      delete_button: "Xóa"
+      
   admin:
     index:
       title: "Bạn chưa đăng nhập"

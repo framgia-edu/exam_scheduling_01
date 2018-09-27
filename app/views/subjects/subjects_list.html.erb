@@ -1,0 +1,57 @@
+<% provide :id, "body_subject" %>
+<% provide :title, t ".title" %>
+<%= render "layouts/menu" %>
+<section>
+  <form action="delete_subject" method="get">
+    <h1><% t ".name" %>
+      <section class="links">
+        </br>
+        
+        <%= link_to t(".add"), subject_new_subjetc_path, class: "link wipe" %>
+      </section>
+    </h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th><% t ".subject_code" %></th>
+            <th><% t ".subject_name" %></th>
+            <th><% t ".class_list_of_subject" %></th>
+            <th><% t ".edit" %></th>
+            <th><% t ".delete" %></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>
+              <%= link_to t(".reckon_link"), "#", id:  "xem_danh_sach_lop" %>
+            </td>
+            <td>
+              <section class="links">
+                <%= link_to t(".edit_link"), "#", class: "link underline", style: "margin-left: -10px" %>
+              </section>
+            </td>
+            <td>
+              <div>
+                <label>
+                  <input type="checkbox" class="option-input checkbox" name="<?php echo $subject[$i]['id']?>"/><% t ".delete_checkbox" %>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="wrap">
+      <button class="button"><% t ".button_delete" %></button>
+    </div>
+  </form>
+</section>

@@ -76,6 +76,8 @@ en:
       exam_during: "Exam during"
     destroy:
       delete: "Subject's deleted !"
+      delete_button: "Xóa"
+  admin:
     index:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"

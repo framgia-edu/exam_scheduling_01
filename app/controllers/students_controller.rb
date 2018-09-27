@@ -2,7 +2,8 @@ class StudentsController < ApplicationController
   before_action :find_student, only: %i(show edit update destroy)
 
   def index
-    @students = Student.order_by_code
+    @students = Student.order_by_code.paginate page: params[:page],
+      per_page: Settings.students.per_page
   end
 
   def show; end
@@ -37,7 +38,7 @@ class StudentsController < ApplicationController
   def destroy
     @student.destroy
     flash[:success] = t ".delete"
-    redirect_to students_url
+    redirect_to students_path
   end
 
   private

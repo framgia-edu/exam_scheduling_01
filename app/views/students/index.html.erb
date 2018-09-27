@@ -5,5 +5,8 @@
     <%= st.code %>
     | <%= st.name %>
     | <%= st.info %>
+    | <%= link_to t(".delete"), st, method: :delete,
+      data: { confirm: t(".sure") } %>
   </div>
 <% end %>
+<%= will_paginate %>

@@ -1,0 +1,20 @@
+<%= form_with model: :room do |form| %>
+  <div class="form-row">
+    <div class="col">
+      <%= form.text_field :code, class: "form-control",
+        placeholder:"subject code" %>
+      </div>
+      <div class="col">
+      <%= form.text_field :name, class: "form-control",
+        placeholder:"subject name" %>
+      </div>
+      <div class="col">
+      <%= form.number_field :volume, class: "form-control",
+        placeholder:"times exam" %>
+      </div>
+      <div class="col">
+      <%= form.submit yield(:button_text), class: "btn btn-primary" %>
+    </div>
+    </div>
+  </div>
+<% end %>

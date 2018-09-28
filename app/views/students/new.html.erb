@@ -1,5 +1,5 @@
 <h1><%= t ".new" %></h1>
-<%= form_for @student do |f| %>
+<%= form_with model: @student do |f| %>
   <%= f.label :code %>
   <%= f.text_field :code, class: "form-control" %>
 

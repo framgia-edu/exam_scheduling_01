@@ -1,0 +1,38 @@
+<% provide :title, t("header.schedules") %>
+<% provide :button_search, t("subjects.search_student") %>
+<% provide :text_search, t("subjects.student_code") %>
+<% provide :path_search, schedules_path %>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<%= render "form_schedule"%>
+<%= render "shared/form_search"%>
+</nav>
+<table class="table table-bordered table-striped">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col"><%= t("schedules.day") %></th>
+      <th scope="col"><%= t("schedules.session") %></th>
+      <th scope="col"><%= t("subjects.subject_code") %></th>
+      <th scope="col"><%= t("rooms.code") %></th>
+      <th scope="col"><%= t("subjects.times") %></th>
+      <th scope="col"><%= t("table.edit") %></th>
+      <th scope="col"><%= t("table.delete") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @schedules.each.with_index(1) do |schedule, index| %>
+    <tr>
+      <td><%= schedule.day %></td>
+      <td><%= schedule.session %></td>
+      <td><%= @schedule.subject_code %></td>
+      <td><%= schedule.room_code %></td>
+      <td><%= times_exam %></td>
+      <th scope="col"><%= link_to t("subjects.table.edit"),
+       edit_schedule_path(schedule) %></th>
+      <th scope="col"><%= link_to t("subjects.table.delete"), schedule, method: :delete,
+        data: { confirm: t("table.confirm") }%></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @schedules ,
+  renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>

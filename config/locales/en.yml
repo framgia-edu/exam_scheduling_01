@@ -27,7 +27,7 @@ en:
       logout: "Log out"
       login: "Log in"
       home: "Home"
-  
+
   students:
     edit:
       form: "Form edit"
@@ -63,7 +63,7 @@ en:
       login: "Log in"
     create:
       invalid: "Invalid email/password combination"
-  
+
   subjects:
     subject_list: 
       title: "Học Phần"
@@ -130,6 +130,16 @@ en:
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
       delete_button: "Xóa"
+      
+  days:
+    days_list:
+      title: "Ngày"
+      name: "Danh sách ngày thi"
+      add: "Thêm"
+      no_day: "Ngày thi thứ"
+      date: "Ngày"
+      edit: "Sửa"
+      edit_link: "Sửa"
 
   admin:
     index:
@@ -146,7 +156,7 @@ en:
       button: "Let me in."
       sure: "Are you sure to delete this subject !"
       subjects: "All subject here"
-  
+
   users:
     new:
       signup: "Sign up new Student/Supervisor"

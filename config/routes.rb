@@ -5,15 +5,15 @@ Rails.application.routes.draw do
 
   draw :admin
 
-  get "/login", to: "login#new"
-  post "/login", to: "login#create"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
   
   resource :subject, only: [:show]
   namespace :admin do
   	resource :subject, except: [:new, :create, :destroy]
   end 
   
-  get "/getedit/:id", to: "students#edit"
-  resources :students
-  root "students#new"
+  get "/getedit/:id", to: "users#edit"
+  resources :users
+  root "users#new"
 end

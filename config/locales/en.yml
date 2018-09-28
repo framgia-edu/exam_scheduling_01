@@ -9,7 +9,6 @@ en:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"
       click: "Click vào đây để đăng nhập"
-
   layouts:
     menu:
       subject: "Học Phần"
@@ -28,7 +27,7 @@ en:
       logout: "Log out"
       login: "Log in"
       home: "Home"
-
+  
   students:
     edit:
       form: "Form edit"
@@ -47,13 +46,24 @@ en:
       sure: "Are you sure to delete this student?"
     destroy:
       delete: "Delete success"
+    students_list: 
+      title: "Sinh viên"
+      name: "Sinh viên"
+      add: "Thêm"
+      student_code: "Mã sinh viên"
+      full_name: "Họ và tên"
+      edit: "Sửa"
+      delete: "Xóa"
+      edit_link: "Sửa"
+      delete_checkbox: "Xóa"
+      delete_button: "Xóa"
 
   sessions:
     new:
       login: "Log in"
     create:
       invalid: "Invalid email/password combination"
-
+  
   subjects:
     subject_list: 
       title: "Học Phần"
@@ -104,7 +114,7 @@ en:
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
       delete_button: "Xóa"
-      
+
   class:
     class_list: 
       title: "Lớp"
@@ -126,6 +136,7 @@ en:
       title: "Bạn chưa đăng nhập"
       infor: "Bạn Chưa Đăng Nhập"
       click: "Click vào đây để đăng nhập"
+  
   login: 
     new:
       title: "Đăng nhập"
@@ -135,7 +146,7 @@ en:
       button: "Let me in."
       sure: "Are you sure to delete this subject !"
       subjects: "All subject here"
-
+  
   users:
     new:
       signup: "Sign up new Student/Supervisor"

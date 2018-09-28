@@ -1,6 +1,8 @@
+@import 'color';
+
 h1{
   font-size: 30px;
-  color: #fff;
+  color: $h1-color;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
@@ -14,14 +16,14 @@ table{
 }
 
 .tbl-header{
-  background-color: rgba(255,255,255,0.3);
+  background-color: $background-color-tbl-header;
 }
 
 .tbl-content{
   height:300px;
   overflow-x:auto;
   margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid $border-color-of-tbl-content;
   }
 
 th{
@@ -29,7 +31,7 @@ th{
   text-align: left;
   font-weight: 500;
   font-size: 12px;
-  color: #fff;
+  color: $th-color;
   text-transform: uppercase;
 }
 
@@ -39,8 +41,8 @@ td{
   vertical-align:middle;
   font-weight: 300;
   font-size: 12px;
-  color: #fff;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
+  color: $td-color;
+  border-bottom: solid 1px $border-bottom-color-of-td;
   }
 
 /* demo styles */
@@ -48,9 +50,9 @@ td{
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
                 
 #body_room{
-  background: -webkit-linear-gradient(left, #16222A, #3A6073);
-  background: -o-linear-gradient(left, #16222A, #3A6073);
-  background: linear-gradient(to right, #16222A, #3A6073);
+  background: -webkit-linear-gradient(left, $body-room-background-color-webkit-linear-left-a, $body-room-background-color-webkit-linear-left-b);
+  background: -o-linear-gradient(left, $body-room-background-color-o-linear-left-a, $body-room-background-color-o-linear-left-b);
+  background: linear-gradient(to right, $body-room-background-color-linear-a, $body-room-background-color-linear-b);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -65,11 +67,11 @@ section{
 } 
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px $webkit-scrollbar-track-color; 
 }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px $webkit-scrollbar-thumb-color; 
 }
 
 *{font-family: 'Roboto', sans-serif;}
@@ -105,9 +107,9 @@ section{
   height: 20px;
   width: 20px;
   transition: all 0.15s ease-out 0s;
-  background: #cbd1d8;
+  background: $option-input-background-color;
   border: none;
-  color: #fff;
+  color: $option-input-color;
   cursor: pointer;
   display: inline-block;
   margin-right: 0.5rem;
@@ -117,11 +119,11 @@ section{
 }
 
 .option-input:hover {
-   background: #9faab7;
+   background: $option-input-hover-coler;
  }
 
 .option-input:checked {
-  background: #40e0d0;
+  background: $option-input-checked;
 }
 
 .option-input:checked::before {
@@ -139,7 +141,7 @@ section{
   -webkit-animation: click-wave 0.65s;
   -moz-animation: click-wave 0.65s;
   animation: click-wave 0.65s;
-  background: #40e0d0;
+  background: $option-input-checked-after;
   content: '';
   display: block;
   position: relative;
@@ -159,7 +161,7 @@ section{
   width: 0%;
   height: 2px;
   display: block;
-  background-color: #fff;
+  background-color: $underline-after-background-color;
   content: " ";
   position: absolute;
   top: 34px;
@@ -172,7 +174,7 @@ section{
   width: 35%;
   height: 2px;
   display: block;
-  background-color: #fff;
+  background-color: $underline-hover-after;
   content: " ";
   position: absolute;
   top: 34px;
@@ -187,7 +189,7 @@ section{
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: $link-color;
   letter-spacing: 0.1em;
   font-size: 0.7rem;
   margin: 10px;
@@ -195,7 +197,7 @@ section{
 }
 
 .wipe {
-  border: 2px solid #fff;
+  border: 2px solid $wipe-border-color;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -209,7 +211,7 @@ section{
   width: 100%;
   height: 100%;
   display: block;
-  background-color: #fff;
+  background-color: $wipe-after-background-color;
   content: " ";
   position: absolute;
   top: 0;
@@ -223,7 +225,7 @@ section{
 }
 
 .wipe:hover {
-  color: #124a58;
+  color: $wipe-hover-color;
 }
 
 .wipe:hover::after {
@@ -250,49 +252,19 @@ section{
   transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
-  background-color: #fff;
+  color: $button-color;
+  background-color: $button-background-color;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px $button-box-shadow-color;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
 }
 
 .button:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
+  background-color: $button-hover-background-color;
+  box-shadow: 0px 15px 20px $button-hover-box-shadow-color;
+  color: $button-hover-color;
   transform: translateY(-7px);
-}
-
-#xem_danh_sach_sinh_vien {
-  color: blue;
-  font: bold 1.2em/1.5 'Fjalla One', sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: .2s;
-}
-
-#xem_danh_sach_sinh_vien:hover {
-  color: hotPink;
-}
-
-@media (-webkit-min-device-pixel-ratio:0) {
-  #xem_danh_sach_sinh_vien {
-    background-color: skyBlue;
-    background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-transition: .1s .2s;
-    -webkit-background-clip: text;
-   }
-
-  #xem_danh_sach_sinh_vien:hover {
-    background-position: 0 0;
-    color: transparent;
-    transition: .4s 0;
-  }
 }

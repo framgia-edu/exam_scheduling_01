@@ -8,31 +8,32 @@
   margin-bottom: 0; 
   font-size: 13px; 
   line-height: 18px; 
-  color: #333333; 
+  color: $login-btn-color; 
   text-align: center;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); 
-  vertical-align: middle; 
+  text-shadow: 0 1px 1px $login-btn-shadow;
   background-color: #f5f5f5; 
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); 
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); 
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); 
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); 
-  background-image: linear-gradient(top, #ffffff, #e6e6e6); 
-  background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); 
-  border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); 
-  border: 1px solid #e6e6e6; -webkit-border-radius: 4px; 
+  background-image: -moz-linear-gradient(top, $login-btn-background-image-moz-linear-top-a $login-btn-background-image-moz-linear-top-b); 
+  background-image: -ms-linear-gradient(top, $login-btn-background-image-ms-linear-top-a, $login-btn-background-image-ms-linear-top-b); 
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($login-btn-background-image-webkit-linear-a), to($login-btn-background-image-webkit-linear-b)); 
+  background-image: -webkit-linear-gradient(top, $login-btn-background-image-webkit-linear-top-a, $login-btn-background-image-webkit-linear-top-b); 
+  background-image: -o-linear-gradient(top, $login-btn-background-image-o-linear-top-a, $login-btn-background-image-o-linear-top-b); 
+  background-image: linear-gradient(top, $login-btn-background-image-linear-top-a, $login-btn-background-image-linear-top-b); 
+  background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=$login-btn-background-repeat-start, endColorstr=$login-btn-background-repeat-end, GradientType=0); 
+  border-color: $login-btn-border-color-a-a $login-btn-border-color-a-b $login-btn-border-color-a-c; 
+  border-color: $login-btn-border-color-b-a $login-btn-border-color-b-b $login-btn-border-color-b-c; 
+  border: 1px solid $login-btn-border; 
+  -webkit-border-radius: 4px; 
   -moz-border-radius: 4px; 
   border-radius: 4px; 
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
+  -webkit-box-shadow: inset 0 1px 0 $login-btn-webkit-box-shadow-a, 0 1px 2px $login-btn-webkit-box-shadow-b; 
+  -moz-box-shadow: inset 0 1px 0 $login-btn-moz-box-shadow-a, 0 1px 2px $login-btn-moz-box-shadow-b; 
+  box-shadow: inset 0 1px 0 $login-btn-box-shadow-a, 0 1px 2px $login-btn-box-shadow-b; 
   cursor: pointer; 
   *margin-left: .3em; 
 }
 
 .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { 
-  background-color: #e6e6e6; 
+  background-color: $login-btn-hover-active-disabled-background-color; 
 }
 
 .btn-large { 
@@ -44,9 +45,9 @@
 }
 
 .btn:hover { 
-  color: #333333; 
+  color: $login-btn-hover; 
   text-decoration: none; 
-  background-color: #e6e6e6; 
+  background-color: $login-btn-hover-background-color; 
   background-position: 0 -15px; 
   -webkit-transition: background-position 0.1s linear; 
   -moz-transition: background-position 0.1s linear; 
@@ -56,30 +57,32 @@
 }
 
 .btn-primary, .btn-primary:hover { 
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
-  color: #ffffff; 
+  text-shadow: 0 -1px 0 $login-btn-primary-text-shadow; 
+  color: $login-btn-primary; 
 } 
 
 .btn-primary.active { 
-  color: rgba(255, 255, 255, 0.75);
+  color: $login-btn-primary-active;
 }
 
 .btn-primary { 
   background-color: #4a77d4; 
-  background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
-  background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: linear-gradient(top, #6eb6de, #4a77d4); 
+  background-image: -moz-linear-gradient(top, $login-btn-primary-moz-linear-top-a, $login-btn-primary-moz-linear-top-b); 
+  background-image: -ms-linear-gradient(top, $login-btn-primary-ms-linear-top-a, $login-btn-primary-ms-linear-top-b); 
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($login-btn-primary-webkit-top-a), to($login-btn-primary-webkit-top-a)); 
+  background-image: -webkit-linear-gradient(top, $login-btn-primary-webkit-linear-top-a, $login-btn-primary-webkit-linear-top-b); 
+  background-image: -o-linear-gradient(top, $login-btn-primary-o-linear-top-a $login-btn-primary-o-linear-top-b); 
+  background-image: linear-gradient(top, $login-btn-primary-linear-top-a, $login-btn-primary-linear-top-b); 
   background-repeat: repeat-x; 
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=$login-btn-primary-start, endColorstr=$login-btn-primary-end, GradientType=0);  
   border: 1px solid #3762bc; 
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4); 
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); 
+  text-shadow: 1px 1px 1px $login-btn-primary-text-shadow; 
+  box-shadow: inset 0 1px 0 $login-btn-primary-box-shadow-a, 0 1px 2px $login-btn-primary-box-shadow-b; 
 }
 
-.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]{   filter: none; background-color: #4a77d4; 
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {   
+  filter: none; 
+  background-color: $login-btn-primary-hover-background-color; 
 }
 
 .btn-block { 
@@ -105,13 +108,13 @@ body {
   width: 100%;
   height:100%;
   font-family: 'Open Sans', sans-serif;
-  background: #092756;
-  background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
-  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
-  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+  background: $login-body-background;
+  background: -moz-radial-gradient(0% 100%, ellipse cover, $login-body-background-moz-radial 10%,$login-body-background-moz-radial-b 40%),-moz-linear-gradient(top,  $login-body-background-moz-linear-top-a 0%, $login-body-background-moz-linear-top-b 100%), -moz-linear-gradient(-45deg,  $login-body-background-moz-linear-a 0%, $login-body-background-moz-linear-b 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, $login-body-background-webkit-radial-a 10%,$login-body-background-webkit-radial-b 40%, -webkit-linear-gradient(top,  $login-body-background-webkit-linear-top-a 0%,$login-body-background-webkit-linear-top-b 100%), -webkit-linear-gradient(-45deg,  $login-body-background-webkit-linear-a 0%,$login-body-background-webkit-linear-b 100%);
+  background: -o-radial-gradient(0% 100%, ellipse cover, $login-body-background-o-radial-a 10%,$login-body-background-o-radial-b 40%), -o-linear-gradient(top,  $login-body-background-o-linear-top-a 0%,$login-body-background-o-linear-top-b 100%), -o-linear-gradient(-45deg,  $login-body-background-o-linear-a 0%, $login-body-background-o-linear-b 100%);
+  background: -ms-radial-gradient(0% 100%, ellipse cover, $login-body-background-ms-radial-a 10%,$login-body-background-ms-radial-b, -ms-linear-gradient(top,  $login-body-background-ms-linear-top-a 0%,$login-body-background-ms-linear-top-b 100%), -ms-linear-gradient(-45deg,  $login-body-background-ms-linear-a 0%, $login-body-background-ms-linear-b 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, $login-body-background-webkit-radia-a 10%,$login-body-background-webkit-radia-b 40%), linear-gradient(to bottom,  $login-body-background-linear-bottom-a 0%,$login-body-background-linear-bottom-b 100%), linear-gradient(135deg,  $login-body-background-linear-a 0%,$login-body-background-linear-b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$login-body-start', endColorstr='$login-body-start',GradientType=1 );
 }
 
 .login {
@@ -124,21 +127,21 @@ body {
 }
 
 .login h1 { 
-  color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+  color: $login-h1; text-shadow: 0 0 10px $login-h1-text-shadow; 
   letter-spacing:1px; text-align:center; 
 }
 
 input {
   width: 100%;
   margin-bottom: 10px;
-  background: rgba(0,0,0,0.3);
+  background: $login-input-background;
   border: none;
   outline: none;
   padding: 10px;
   font-size: 13px;
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-  border: 1px solid rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 1px $login-input-text-shadow;
+  border: 1px solid $login-input-border;
   border-radius: 4px;
   box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
   -webkit-transition: box-shadow .5s ease;
@@ -149,6 +152,6 @@ input {
 }
 
 input:focus { 
-  box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); 
+  box-shadow: inset 0 -5px 45px $login-input-focus-box-shadow-a, 0 1px 1px $login-input-focus-box-shadow-a; 
 }
 

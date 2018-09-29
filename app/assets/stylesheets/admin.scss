@@ -69,14 +69,13 @@
   top: 0;
   left: 500px;
   font-size: 4em;
-  /*text-shadow: 2px 2px 10px #000000;*/
 }
 
 body {
   padding: 0;
   margin: 0;
-  background: #596778;
-  color: #EEEEEE;
+  background: $body-background-color;
+  color: $body-color;
   text-align: center;
   font-family: "Lato", sans-serif;
 }
@@ -94,7 +93,7 @@ a {
 
 .menu-item,
 .menu-open-button {
-  background: #EEEEEE;
+  background: $menu-open-button-background-color;
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -118,7 +117,7 @@ a {
 .lines {
   width: 25px;
   height: 3px;
-  background: #596778;
+  background: $line-background-color;
   display: block;
   position: absolute;
   top: 50%;
@@ -181,8 +180,8 @@ a {
 } */
 
 .menu-item:hover {
-  background: #EEEEEE;
-  color: #3290B1;
+  background: $menu-item-hover-color;
+  color: $menu-item-color;
 }
 
 .menu-item:nth-child(3) {
@@ -301,80 +300,80 @@ a {
 }
 
 .blue {
-  background-color: #669AE1;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-blue-background-color;
+  box-shadow: 3px 3px 0 0 $menu-blue-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-blue-text-shadow-color;
 }
 
 .blue:hover {
-  color: #669AE1;
+  color: $menu-blue-hover-color;
   text-shadow: none;
 }
 
 .green {
-  background-color: #70CC72;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-green-background-colo;
+  box-shadow: 3px 3px 0 0 $menu-green-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-green-text-shadow-color;
 }
 
 .green:hover {
-  color: #70CC72;
+  color: $menu-green-hover-color;
   text-shadow: none;
 }
 
 .red {
-  background-color: #FE4365;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-red-background-color;
+  box-shadow: 3px 3px 0 0 $menu-red-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-red-text-shadow-color;
 }
 
 .red:hover {
-  color: #FE4365;
+  color: $menu-red-hover-color;
   text-shadow: none;
 }
 
 .purple {
-  background-color: #C49CDE;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-purple-background-color:;
+  box-shadow: 3px 3px 0 0 $menu-purple-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-purple-text-shadow-color;
 }
 
 .purple:hover {
-  color: #C49CDE;
+  color: $menu-purple-hover-color;
   text-shadow: none;
 }
 
 .orange {
-  background-color: #FC913A;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-orange-background-color;
+  box-shadow: 3px 3px 0 0 $menu-orange-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-orange-text-shadow-color;
 }
 
 .orange:hover {
-  color: #FC913A;
+  color: $menu-orange-hover-color;
   text-shadow: none;
 }
 
 .lightblue {
-  background-color: #62C2E4;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: $menu-lightblue-background-color;
+  box-shadow: 3px 3px 0 0 $menu-lightblue-box-shadow-color;
+  text-shadow: 1px 1px 0 $menu-lightbue-text-shadow-color;
 }
 
 .lightblue:hover {
-  color: #62C2E4;
+  color: $menu-lightblue-hover-color;
   text-shadow: none;
 }
 
 .credit {
   margin: 24px 20px 120px 0;
   text-align: right;
-  color: #EEEEEE;
+  color: $credit-color;
 }
 
 .credit a {
   padding: 8px 0;
-  color: #C49CDE;
+  color: $credit-a-color;
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }

@@ -1,12 +1,11 @@
 <% provide :title, t ".title" %>
-<% provide :id, "body_room" %>
-<%= render "layouts/menu" %>
+<% provide :id, "body_day" %>
 <section>
-  <form action="delete_room" method="get">
+  <form action="delete_class" method="get">
     <h1><% t ".name" %>
       <section class="links">
         </br>
-        <a class="link wipe" href="add_room">Thêm</a>
+        <a class="link wipe" href="add_date"><% t ".add" %></a>
       </section>
     </h1>
     <div class="tbl-header">
@@ -14,10 +13,9 @@
         <thead>
           <tr>
             <th>#</th>
-            <th><% t ".room_name" %></th>
-            <th><% t ".disk" %></th>
+            <th><% t ".no_day" %></th>
+            <th><% t ".date" %></th>
             <th><% t ".edit" %></th>
-            <th><% t ".delete" %></th>
           </tr>
         </thead>
       </table>
@@ -34,19 +32,9 @@
                 <%= link_to t(".edit_link"), "#", class: "link underline" %>
               </section>
             </td>
-            <td>
-              <div>
-                <label>
-                  <input type="checkbox" class="option-input checkbox" name="<?php echo $room[$i]['id']?>"/><% t ".delete_checkbox" %>
-                </label>
-              </div>
-            </td>
           </tr>
         </tbody>
       </table>
-    </div>
-    <div class="wrap">
-      <button class="button"><% t ".delete_button" %></button>
     </div>
   </form>
 </section>

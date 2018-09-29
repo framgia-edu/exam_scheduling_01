@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import 'color';
 
 .btn { 
   display: inline-block; 
@@ -109,10 +110,10 @@ body {
   height:100%;
   font-family: 'Open Sans', sans-serif;
   background: $login-body-background;
-  background: -moz-radial-gradient(0% 100%, ellipse cover, $login-body-background-moz-radial 10%,$login-body-background-moz-radial-b 40%),-moz-linear-gradient(top,  $login-body-background-moz-linear-top-a 0%, $login-body-background-moz-linear-top-b 100%), -moz-linear-gradient(-45deg,  $login-body-background-moz-linear-a 0%, $login-body-background-moz-linear-b 100%);
-  background: -webkit-radial-gradient(0% 100%, ellipse cover, $login-body-background-webkit-radial-a 10%,$login-body-background-webkit-radial-b 40%, -webkit-linear-gradient(top,  $login-body-background-webkit-linear-top-a 0%,$login-body-background-webkit-linear-top-b 100%), -webkit-linear-gradient(-45deg,  $login-body-background-webkit-linear-a 0%,$login-body-background-webkit-linear-b 100%);
+  background: -moz-radial-gradient(0% 100%, ellipse cover, $login-body-background-moz-radial-a 10%,$login-body-background-moz-radial-b 40%),-moz-linear-gradient(top,  $login-body-background-moz-linear-top-a 0%, $login-body-background-moz-linear-top-b 100%), -moz-linear-gradient(-45deg,  $login-body-background-moz-linear-a 0%, $login-body-background-moz-linear-b 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, $login-body-background-webkit-radial-a 10%,$login-body-background-webkit-radial-b 40%), -webkit-linear-gradient(top,  $login-body-background-webkit-linear-top-a 0%,$login-body-background-webkit-linear-top-b 100%), -webkit-linear-gradient(-45deg,  $login-body-background-webkit-linear-a 0%,$login-body-background-webkit-linear-b 100%);
   background: -o-radial-gradient(0% 100%, ellipse cover, $login-body-background-o-radial-a 10%,$login-body-background-o-radial-b 40%), -o-linear-gradient(top,  $login-body-background-o-linear-top-a 0%,$login-body-background-o-linear-top-b 100%), -o-linear-gradient(-45deg,  $login-body-background-o-linear-a 0%, $login-body-background-o-linear-b 100%);
-  background: -ms-radial-gradient(0% 100%, ellipse cover, $login-body-background-ms-radial-a 10%,$login-body-background-ms-radial-b, -ms-linear-gradient(top,  $login-body-background-ms-linear-top-a 0%,$login-body-background-ms-linear-top-b 100%), -ms-linear-gradient(-45deg,  $login-body-background-ms-linear-a 0%, $login-body-background-ms-linear-b 100%);
+  background: -ms-radial-gradient(0% 100%, ellipse cover, $login-body-background-ms-radial-a 10%,$login-body-background-ms-radial-b 40%), -ms-linear-gradient(top,  $login-body-background-ms-linear-top-a 0%,$login-body-background-ms-linear-top-b 100%), -ms-linear-gradient(-45deg,  $login-body-background-ms-linear-a 0%, $login-body-background-ms-linear-b 100%);
   background: -webkit-radial-gradient(0% 100%, ellipse cover, $login-body-background-webkit-radia-a 10%,$login-body-background-webkit-radia-b 40%), linear-gradient(to bottom,  $login-body-background-linear-bottom-a 0%,$login-body-background-linear-bottom-b 100%), linear-gradient(135deg,  $login-body-background-linear-a 0%,$login-body-background-linear-b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$login-body-start', endColorstr='$login-body-start',GradientType=1 );
 }

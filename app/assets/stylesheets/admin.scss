@@ -1,3 +1,5 @@
+@import 'color';
+
 #arrow{
   font-size: 1em;
   margin-left: 40px;
@@ -311,7 +313,7 @@ a {
 }
 
 .green {
-  background-color: $menu-green-background-colo;
+  background-color: $menu-green-background-color;
   box-shadow: 3px 3px 0 0 $menu-green-box-shadow-color;
   text-shadow: 1px 1px 0 $menu-green-text-shadow-color;
 }
@@ -333,7 +335,7 @@ a {
 }
 
 .purple {
-  background-color: $menu-purple-background-color:;
+  background-color: $menu-purple-background-color;
   box-shadow: 3px 3px 0 0 $menu-purple-box-shadow-color;
   text-shadow: 1px 1px 0 $menu-purple-text-shadow-color;
 }

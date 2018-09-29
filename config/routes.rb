@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   	resource :subject, except: [:new, :create, :destroy]
   end 
   
-  get "/getedit/:id", to: "students#edit"
-  resources :students
-  root "students#new"
+  get "/getedit/:id", to: "users#edit"
+  resources :users
+  root "users#new"
 end

@@ -10,93 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_112019) do
+ActiveRecord::Schema.define(version: 2018_09_29_190548) do
 
-  create_table "class_students", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "subject_id"
+  create_table "days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "no_day"
+    t.date "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["subject_id"], name: "index_class_students_on_subject_id"
-    t.index ["user_id"], name: "index_class_students_on_user_id"
   end
 
-  create_table "feedbacks", force: :cascade do |t|
-    t.string "message"
-    t.string "reply"
+  create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "student_code"
+    t.string "student_name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_feedbacks_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_feedbacks_on_user_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
-  create_table "invitations", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "schedule_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_invitations_on_schedule_id"
-    t.index ["user_id", "schedule_id"], name: "index_invitations_on_user_id_and_schedule_id", unique: true
-    t.index ["user_id"], name: "index_invitations_on_user_id"
-  end
-
-  create_table "oversees", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["code"], name: "index_oversees_on_code"
-  end
-
-  create_table "rooms", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.integer "volume"
-    t.boolean "state"
-    t.integer "overseer_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "schedules", force: :cascade do |t|
-    t.string "class_name"
+  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "subject_code"
     t.string "subject_name"
-    t.integer "times_exam"
-    t.string "room_code"
-    t.datetime "day"
-    t.integer "session"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["subject_code", "room_code"], name: "index_schedules_on_subject_code_and_room_code"
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "remember_token"
+    t.string "position"
     t.string "email"
-    t.string "info"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "subjects", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.integer "times_exam"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.string "email"
-    t.string "info"
-    t.string "password_digest"
-    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

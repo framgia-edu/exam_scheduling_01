@@ -10,11 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_29_190548) do
+ActiveRecord::Schema.define(version: 2018_10_01_063845) do
 
   create_table "days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "no_day"
     t.date "day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "study_class_id"
+    t.integer "no_group"
+    t.bigint "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_groups_on_room_id"
+    t.index ["study_class_id"], name: "index_groups_on_study_class_id"
+  end
+
+  create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "room_name"
+    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +45,31 @@ ActiveRecord::Schema.define(version: 2018_09_29_190548) do
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
+  create_table "students_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "group_id"
+    t.index ["group_id"], name: "index_students_groups_on_group_id"
+    t.index ["student_id"], name: "index_students_groups_on_student_id"
+  end
+
+  create_table "students_study_classes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "study_class_id"
+    t.index ["student_id"], name: "index_students_study_classes_on_student_id"
+    t.index ["study_class_id"], name: "index_students_study_classes_on_study_class_id"
+  end
+
+  create_table "study_classes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "subject_id"
+    t.bigint "day_id"
+    t.string "class_code"
+    t.string "case"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_study_classes_on_day_id"
+    t.index ["subject_id"], name: "index_study_classes_on_subject_id"
+  end
+  
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "subject_code"
     t.string "subject_name"
@@ -43,6 +85,15 @@ ActiveRecord::Schema.define(version: 2018_09_29_190548) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
+  add_foreign_key "groups", "rooms"
+  add_foreign_key "groups", "study_classes"
+  add_foreign_key "students_groups", "groups"
+  add_foreign_key "students_groups", "students"
+  add_foreign_key "students_study_classes", "students"
+  add_foreign_key "students_study_classes", "study_classes"
+  add_foreign_key "study_classes", "days"
+  add_foreign_key "study_classes", "subjects"
 end

@@ -1,20 +1,16 @@
 class User < ApplicationRecord
-  has_one :oversee
-  has_many :feedbacks
+  has_one :student
 
-  has_many :class_students, foreign_key: :user_id, dependent: :destroy
-  has_many :subjects, through: :class_students, source: :subject
+  before_save{email.downcase!}
 
-  has_many :invitations, foreign_key: :user_id, dependent: :destroy
-  has_many :schedules, through: :invitations, source: :schedule
+  validates :username, presence: true, uniqueness: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true,
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: false}
 
-  def add_subject subject_exam
-    subjects << subject_exam
-  end
-
-  def remove_subject subject_exam
-    subjects.delete subject_exam
-  end
   has_secure_password
-  scope :order_by_code, ->{order code: :asc}
+  validates :password, presence: true
+
+  validates :position, presence: true, inclusion: {in: %w(Admin Student)}
 end

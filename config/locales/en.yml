@@ -4,6 +4,7 @@ en:
   nostudent: "Not exist"
   please_log: "Log in first"
   nouser: "User not exist! Check again please."
+  avatar_oversize: "should be less than 500KB"
 
   admin:
     index:

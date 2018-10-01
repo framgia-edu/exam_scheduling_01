@@ -2,7 +2,7 @@ $h1-color: #fff;
 $background-color-of-tbl-header: rgba(255,255,255,0.3);
 $border-color-of-tbl-content: rgba(255,255,255,0.3);
 $th-color: #fff;
-$td-color: $fff;
+$td-color: #fff;
 $border-bottom-color-of-td: rgba(255,255,255,0.1);
 $webkit-scrollbar-track-color: rgba(0,0,0,0.3);
 $webkit-scrollbar-thumb-color: rgba(0,0,0,0.3);
@@ -20,7 +20,7 @@ $wipe-hover-color: #124a58;
 $button-color: #000;
 $button-background-color: #fff;
 $button-box-shadow-color: rgba(0, 0, 0, 0.1);
-$button-hover-box-shadow-color: rgba(46, 229, 157, 0.4);0
+$button-hover-box-shadow-color: rgba(46, 229, 157, 0.4);
 $button-hover-background-color: #2EE59D;
 $button-hover-color: #fff;
 $xem-danh-sach-lop-color: blue;
@@ -62,15 +62,16 @@ $body-student-background-color-linear-b: #FD746C;
 $body-room-background-color-webkit-linear-left-a: #16222A;
 $body-room-background-color-webkit-linear-left-b: #3A6073;
 $body-room-background-color-o-linear-left-a: #16222A;
+$body-room-background-color-o-linear-left-b: #3A6073;
 $body-room-background-color-linear-a: #16222A;
-$body-room-background-color-linear-b: #3A6073;
 $body-room-background-color-linear-b: #3A6073;
 
 /* body-day */
 
 $body-day-background-color-webkit-linear-left-a: #3a6186;
 $body-day-background-color-webkit-linear-left-b:#89253e;
-$body-day-background-color-o-linear-left-a: #89253e;
+$body-day-background-color-o-linear-left-a: #3a6186;
+$body-day-background-color-o-linear-left-b: #89253e;
 $body-day-background-color-linear-a: #3a6186;
 $body-day-background-color-linear-b: #89253e;
 
@@ -195,7 +196,7 @@ $login-body-background-o-linear-b: #092756;
 $login-body-background-ms-radial-a: rgba(104,128,138,.4);
 $login-body-background-ms-radial-b: rgba(138,114,76,0);
 $login-body-background-ms-linear-top-a: rgba(57,173,219,.25);
-$login-body-background-ms-linear-top-b: rgba(42,60,87,.4) 100%);
+$login-body-background-ms-linear-top-b: rgba(42,60,87,.4);
 $login-body-background-ms-linear-a: #670d10;
 $login-body-background-ms-linear-b: #092756;
 $login-body-background-webkit-radia-a: rgba(104,128,138,.4);

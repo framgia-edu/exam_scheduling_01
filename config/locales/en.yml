@@ -6,6 +6,20 @@ en:
   nouser: "User not exist! Check again please."
   avatar_oversize: "should be less than 500KB"
 
+  static_pages:
+    home:
+      welcome: "Welcome to 'Exam Scheduling Site'"
+      site: "Exam Scheduling Site"
+      advantage: "Advantage for all students and supervisor"
+      info: "Our info"
+    contact:
+      info: "Our Info"
+      email: "Email: admin@examshedule.com"
+      phone: "Phone: 012 xxx xxx xxx"
+      address: "Address: #168, st. m_road, m_district, m_city, m_country"
+      work_day: "Work day: Monday - Saturday"
+      work_time: "Work time: 8:00 - 12:00 & 1:00 - 5:00"
+
   admin:
     index:
       title: "Bạn chưa đăng nhập"

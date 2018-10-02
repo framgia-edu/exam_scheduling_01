@@ -16,7 +16,6 @@ class User < ApplicationRecord
   validate :image_size_validation
   mount_uploader :image, ImageUploader
 
-  has_secure_password
   scope :order_by_code, ->{order code: :asc}
 
   def add_subject subject_exam

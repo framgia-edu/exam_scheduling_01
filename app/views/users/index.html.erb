@@ -3,8 +3,7 @@
 <% @users.each do |st| %>
   <div>
     <%= st.code %>
-    | <%= st.name %>
-    | <%= st.info %>
+    | <%= st.username %>
     | <%= link_to t(".delete"), st, method: :delete,
       data: { confirm: t(".sure") } %>
   </div>

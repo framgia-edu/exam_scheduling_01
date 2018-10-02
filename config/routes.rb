@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get "/login", to: "login#new"
   post "/login", to: "login#create"
-  get "/subject/subject_list"
+  get "/subjects/subjects_list", to: "subjects#subjects_list"
+  get "/subjects/classes_list", to: "subjects#classes_list_of_subject", as: "subjects_classes_list"
   
   resource :subject, only: [:show]
   namespace :admin do
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
   
   get "/getedit/:id", to: "users#edit"
   resources :users
-  root "users#new"
+  root "login#new"
 end

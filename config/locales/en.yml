@@ -72,7 +72,7 @@ en:
       invalid: "Invalid email/password combination"
 
   subjects:
-    subject_list: 
+    subjects_list: 
       title: "Học Phần"
       name: "Danh sách học phần"
       add: "Thêm"
@@ -85,6 +85,22 @@ en:
       edit_link: "Sửa"
       delete_checkbox: "Xóa"
       delete_button: "Xóa"
+    classes_list_of_subject:
+      title: "Danh sách lớp của %{subject_code}"
+      name: "Danh sách lớp của %{subject_code}"
+      add: "Thêm"
+      subject_code_of_class: "Mã học phần"
+      subject_name_of_class: "Tên học phần"
+      class_code: "Mã Lớp"
+      student_list_of_class: "Danh sách sinh viên"
+      edit: "Sửa"
+      delete: "Xóa"
+      reckon_link: "X e m"
+      edit_link: "Sửa"
+      delete_checkbox: "Xóa"
+      delete_button: "Xóa"
+      no_class: "Không tìm thấy"
+
     new:
       signup: "New subject"
       create: "Create new"

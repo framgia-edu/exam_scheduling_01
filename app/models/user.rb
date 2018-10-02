@@ -5,15 +5,15 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
-    format: { with: VALID_EMAIL_REGEX },
-    uniqueness: { case_sensitive: false }
-  
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: false}
+
   has_secure_password
   validates :password, presence: true
-  
+
   validates :position, presence: true
   enum position: [:student, :admin]
-  
+
   validate :image_size_validation
   mount_uploader :image, ImageUploader
 
@@ -36,7 +36,6 @@ class User < ApplicationRecord
   end
 
   def downcase_email
-    email.downcase! 
+    email.downcase!
   end
-
 end

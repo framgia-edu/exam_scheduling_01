@@ -14,9 +14,10 @@ class SubjectsController < ApplicationController
     @subject = Subject.create subject_params
     if @subject.save
       flash[:success] = t "flash_create"
-      redirect_to subjects_url
+      redirect_to subjects_subjects_list_url
     else
       flash[:danger] = t "flash_create_fail"
+      redirect_to subjects_subjects_list_url
     end
   end
 
@@ -70,7 +71,7 @@ class SubjectsController < ApplicationController
   end
 
   def subject_params
-    params.require(:subject).permit :name, :code, :students_total, :times_exam
+    params.require(:subject).permit :subject_name, :subject_code
   end
 
   def subjects_list

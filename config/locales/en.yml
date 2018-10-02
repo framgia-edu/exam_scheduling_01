@@ -118,6 +118,12 @@ en:
     new:
       signup: "New subject"
       create: "Create new"
+      title: "Thêm Học Phần"
+      name: "Thêm Học Phần"
+      subject_code: "Mã Học Phần"
+      subject_name: "Tên Học Phần"
+      button: "THÊM"
+      error: "HỌC PHẦN ĐÃ TỒN TẠI"
     create:
       success: "Create new successful"
       error: "Error, want to create new again !"

@@ -73,8 +73,15 @@ class SubjectsController < ApplicationController
     params.require(:subject).permit :name, :code, :students_total, :times_exam
   end
 
-  def student_params
-    params.require(:class_student).permit :code, :subject_code,
-      :student_code, :student_name
+  def subjects_list
+    @subjects = Subject.order_by_id
+  end
+
+  def classes_list_of_subject
+    @classes = StudyClass.find_by_subject_id params[:id]
+    @subject = Subject.find_by id: params[:id]
+
+    return unless @classes.nil? || @subject.nil?
+    redirect_to subjects_subjects_list_url, notice: t(".no_class")
   end
 end

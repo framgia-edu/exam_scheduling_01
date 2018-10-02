@@ -1,23 +1,24 @@
 <% provide :id, "body-subject" %>
-<% provide :title, t(".title") %>
+<% provide :title, t(".title", subject_code: @subject.subject_code) %>
 <%= render "layouts/menu" %>
 <section>
-  <form action="delete_subject" method="get">
-    <h1 id = "name"><%= t ".name" %>
+  <form action="delete_class" method="get">
+    <h1 id = "name"><%= t(".name", subject_code: @subject.subject_code) %>
       <section class="links">
         </br>
-        
-        <%= link_to t(".add"), "#", class: "link wipe" %>
+       <%= link_to t(".add"), "#", class: "link wipe" %>
       </section>
     </h1>
+    </br>
     <div class="tbl-header">
       <table cellpadding="0" cellspacing="0" border="0">
         <thead>
           <tr>
             <th>#</th>
-            <th><%= t ".subject_code" %></th>
-            <th><%= t ".subject_name" %></th>
-            <th><%= t ".class_list_of_subject" %></th>
+            <th><%= t ".subject_code_of_class" %></th>
+            <th><%= t ".subject_name_of_class" %></th>
+            <th><%= t ".class_code" %></th>
+            <th><%= t ".student_list_of_class" %></th>
             <th><%= t ".edit" %></th>
             <th><%= t ".delete" %></th>
           </tr>
@@ -27,13 +28,14 @@
     <div class="tbl-content">
       <table cellpadding="0" cellspacing="0" border="0">
         <tbody>
-          <% @subjects.each_with_index do |subject, index| %>
-            <tr>
-              <td><%= index + 1 %></td>
-              <td><%= subject.subject_code %></td>
-              <td><%= subject.subject_name %></td>
+          <% @classes.each_with_index do |study_class, index| %>  
+            <tr> 
+              <td><%= index + 1  %></td>
+              <td><%= @subject.subject_code %></td>
+              <td><%= @subject.subject_name %></td>
+              <td><%= study_class.class_code %></td>
               <td>
-                <%= link_to t(".reckon_link"), subjects_classes_list_path(:id => subject.id), id: "classes_list_of_subject" %>
+                <%= link_to t(".reckon_link"), "#", id: "#classes_list_of_subject" %>
               </td>
               <td>
                 <section class="links">

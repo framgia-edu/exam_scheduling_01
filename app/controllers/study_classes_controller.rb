@@ -1,4 +1,4 @@
-class ClassController < ApplicationController
+class StudyClassesController < ApplicationController
   def new; end
 
   def create; end

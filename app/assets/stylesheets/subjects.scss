@@ -270,7 +270,7 @@ section{
   transform: translateY(-7px);
 }
 
-#xem_danh_sach_lop {
+#classes_list_of_subject {
   color: $xem-danh-sach-lop-color;
   font: bold 1.2em/1.5 'Fjalla One', sans-serif;
   text-decoration: none;
@@ -278,12 +278,12 @@ section{
   -webkit-transition: .2s;
 }
 
-#xem_danh_sach_lop:hover {
+#classes_list_of_subject:hover {
   color: $xem-danh-sach-lop-hover-color;
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-  #xem_danh_sach_lop {
+  #classes_list_of_subject {
     background-color: $xem-danh-sach-lop-background-color;
     background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
     background-position: 100% 0;
@@ -293,7 +293,7 @@ section{
     -webkit-background-clip: text;
    }
 
-  #xem_danh_sach_lop:hover {
+  #classes_list_of_subject:hover {
     background-position: 0 0;
     color: transparent;
     transition: .4s 0;

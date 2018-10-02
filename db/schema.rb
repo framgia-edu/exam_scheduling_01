@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_063845) do
     t.index ["day_id"], name: "index_study_classes_on_day_id"
     t.index ["subject_id"], name: "index_study_classes_on_subject_id"
   end
-  
+
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "subject_code"
     t.string "subject_name"

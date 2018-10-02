@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :find_user, only: %i(show edit update destroy)
 
   def index
-    @users = User.order_by_code.paginate page: params[:page],
+    @users = User.order_by_username.paginate page: params[:page],
       per_page: Settings.users.per_page
   end
 
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit :code, :name, :email, :info,
+    params.require(:user).permit :username, :position, :email,
       :password, :password_confirmation, :image
   end
 end

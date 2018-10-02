@@ -1,2 +1,10 @@
-users:
- per_page: 15
+user:
+  per_page: 15
+  username:
+    maximum: 50
+  email:
+    maximum: 100
+  password:
+    minimum: 6
+
+

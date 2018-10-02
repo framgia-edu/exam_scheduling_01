@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "login#new"
   post "/login", to: "login#create"
+  get "/subject/subject_list"
   
   resource :subject, only: [:show]
   namespace :admin do

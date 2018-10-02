@@ -1,9 +1,8 @@
 <%= image_tag @user.image.thumb.url %>
-<div class="col">
+<div class="row">
   <h1>
-    <%= @user.name %>
+    <%= @user.username %>
   </h1>
-  <%= @user.code %>
-  <%= @user.info %>
-  <br><%= @user.email %>
+  &emsp;<%= @user.position %>
+  <br>&emsp;<%= @user.email %>
 </div>

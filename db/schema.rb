@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_063845) do
     t.string "username"
     t.string "password"
     t.string "remember_token"
-    t.string "position"
+    t.integer "position", default: 0, null: false
     t.string "email"
     t.string "image"
     t.datetime "created_at", null: false

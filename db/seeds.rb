@@ -9,7 +9,7 @@
 User.create!(username: "AD01", 
   email: "lop12a1trinhvantan@gmail.com",
   password: "123456",
-  position: "Admin"
+  position: 1
 )
 
 Subject.create!(subject_code: "IT01",

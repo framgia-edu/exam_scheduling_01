@@ -1,18 +1,19 @@
 class User < ApplicationRecord
   has_one :student
-
-  before_save{email.downcase!}
+  before_save :downcase_email
 
   validates :username, presence: true, uniqueness: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
-    format: {with: VALID_EMAIL_REGEX},
-    uniqueness: {case_sensitive: false}
-
+    format: { with: VALID_EMAIL_REGEX },
+    uniqueness: { case_sensitive: false }
+  
   has_secure_password
   validates :password, presence: true
-
-  validates :position, presence: true, inclusion: {in: %w(Admin Student)}
+  
+  validates :position, presence: true
+  enum position: [:student, :admin]
+  
   validate :image_size_validation
   mount_uploader :image, ImageUploader
 
@@ -33,4 +34,9 @@ class User < ApplicationRecord
     return unless image.size > Settings.avatar.max_size.megabytes
     errors.add :image, t("avatar_oversize")
   end
+
+  def downcase_email
+    email.downcase! 
+  end
+
 end

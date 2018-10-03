@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.string :password
       t.string :remember_token
-      t.string :position
+      t.integer :position, null: false, default: 0
       t.string :email
       t.string :image
 

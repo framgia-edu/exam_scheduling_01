@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/home", to: "static_pages#home"
+  get "/contact", to: "static_pages#contact"
   def draw(routes_name)
     instance_eval(File.read(Rails.root.join("config/routes/#{routes_name}.rb")))
   end
@@ -18,4 +20,5 @@ Rails.application.routes.draw do
   get "/getedit/:id", to: "users#edit"
   resources :users
   root "login#new"
+  get "/newuser", to: "users#new"
 end

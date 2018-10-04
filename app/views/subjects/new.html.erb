@@ -1,0 +1,10 @@
+<% provide :id, "body-new-subject" %>
+<% provide :title, t(".title") %>
+</br>
+<h2 id = "name-new-subject"><%= t ".name" %></h2>
+<%= form_for(@subject, url: subjects_create_path, :html => { :id => "form-new-subject" } )do |f|%>
+  <%= f.text_field :subject_code, class: "feedback-input", placeholder: t(".subject_code") %>
+  <%= f.text_area :subject_name, class: "feedback-input", placeholder: t(".subject_name") %>
+  <%= f.submit t(".button")%>
+  <div id="infor"><%= t ".error" %></div>
+<% end %>

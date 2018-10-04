@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   post "/login", to: "login#create"
   get "/subjects/subjects_list", to: "subjects#subjects_list"
   get "/subjects/classes_list", to: "subjects#classes_list_of_subject", as: "subjects_classes_list"
-  
+  get "/subjects/new", to: "subjects#new", as: "subjects_new"
+  post "/subjects/create", to: "subjects#create", as: "subjects_create"
+
   resource :subject, only: [:show]
   namespace :admin do
   	resource :subject, except: [:new, :create, :destroy]
